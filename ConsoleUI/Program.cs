@@ -22,10 +22,7 @@ namespace ConsoleUI
             //    OrarioMessaggio = o1,
             //    TestoMessaggio = "Ciao Mondo",
             //    IsRicevuto = true
-            //};
-
-
-           
+            //};             
             var mezzaNotte = new Orario
             {
                 Ora = 0,
