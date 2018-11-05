@@ -68,7 +68,6 @@ namespace ChatClassLibrary
 
         public int Differenza(Data d)
             => Math.Abs(JulianDay(this) - JulianDay(d));
-
     }
 
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ChatClassLibrary
 {
-    class Messaggio
+    public class Messaggio
     {
         public Data DataMessaggio { get; set; }
         public Orario OrarioMessaggio { get; set; }
