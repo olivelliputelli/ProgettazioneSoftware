@@ -22,31 +22,42 @@ namespace ConsoleUI
             //    OrarioMessaggio = o1,
             //    TestoMessaggio = "Ciao Mondo",
             //    IsRicevuto = true
-            //};             
-            var mezzaNotte = new Orario
-            {
-                Ora = 0,
-                Minuti = 0,
-                Secondi = 0
-            };
+            //};
 
-            var mezzoGiorno = new Orario
-            {
-                Ora = 12,
-                Minuti = 0,
-                Secondi = 0
-            };
+            //Orario o2 = new Orario(12, 4, 59);
 
-            Orario oraDiPranzo = mezzoGiorno;
+            //var mezzaNotte = new Orario
+            //{
+            //    Ora = 0,
+            //    Minuti = 0,
+            //    Secondi = 0
+            //};
 
-            var orario = new Orario[24];
-            for (int ora = 0; ora < 24; ora++)
-            {
-                orario[ora].Ora = ora;
-                orario[ora].Minuti = 0;
-                orario[ora].Secondi = 0;
-            }
+            //var mezzoGiorno = new Orario
+            //{
+            //    Ora = 12,
+            //    Minuti = 0,
+            //    Secondi = 0
+            //};
 
+            //Orario oraDiPranzo = mezzoGiorno;
+
+            //var orari = new Orario[24];
+            //for (int ora = 0; ora < 24; ora++)
+            //{
+            //    orari[ora].Ora = ora;
+            //    orari[ora].Minuti = 0;
+            //    orari[ora].Secondi = 0;
+            //}
+
+            Data inizioSecolo = new Data(1, 1, 1900);
+
+            Data fineSecolo = new Data(31, 12, 1999);
+
+            int giorni = fineSecolo.Differenza(inizioSecolo);
+
+            Console.WriteLine(giorni);
+       
             Console.WriteLine("Fine!");
             Console.ReadLine();
         }

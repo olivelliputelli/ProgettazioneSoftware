@@ -35,7 +35,7 @@ namespace ChatClassLibrary
             this.Anno = 2000;
         }
 
-        public Data(int g, int m, int a)
+        public Data(int g = 1, int m = 1, int a = 1)
         {
             if (a < 1 || m < 1 || m > 12 || g < 1) throw new ArgumentOutOfRangeException("Data non valida");
             if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)
@@ -69,5 +69,4 @@ namespace ChatClassLibrary
         public int Differenza(Data d)
             => Math.Abs(JulianDay(this) - JulianDay(d));
     }
-
 }

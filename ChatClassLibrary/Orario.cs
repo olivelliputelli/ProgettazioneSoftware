@@ -38,5 +38,11 @@ namespace ChatClassLibrary
             this.Secondi = 0;
         }
 
+        public Orario(int h, int m, int s)
+        {
+            this.Ora = h;
+            this.Minuti = m;
+            this.Secondi = s;
+        }
     }
 }
