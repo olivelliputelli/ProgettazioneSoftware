@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ChatClassLibrary
 {
@@ -31,12 +29,7 @@ namespace ChatClassLibrary
         }
 
         // Costruttore vuoto
-        public Orario()
-        {
-            this.Ora = 0;
-            this.Minuti = 0;
-            this.Secondi = 0;
-        }
+        public Orario() : this(0, 0, 0) { }
 
         public Orario(int h, int m, int s)
         {
