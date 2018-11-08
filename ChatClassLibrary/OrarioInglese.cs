@@ -4,13 +4,19 @@ namespace ChatClassLibrary
 {
     public class OrarioInglese : Orario
     {
+
         public OrarioInglese() : base() { }
 
-        public OrarioInglese(int h, int m, int s)
-            : base(h, m, s) { }
+        public OrarioInglese(int h, int m, int s) : base(h, m, s) { }
 
+        public OrarioInglese(int h, int m, int s, bool pm)
+        {
+            SetOraInglese(h, pm);
+            Minuti = m;
+            Secondi = s;
+        }
 
-        public void SetOrarioInglese(int h, bool pm)
+        public void SetOraInglese(int h, bool pm)
         {
             if (pm)
             {
@@ -29,11 +35,16 @@ namespace ChatClassLibrary
             }
         }
 
-        public OrarioInglese(int h, int m, int s, bool pm)
+        public int GetOraInglese()
         {
-            SetOrarioInglese(h, pm);
-            Minuti = m;
-            Secondi = s;
+            if (Ora > 12)
+                return Ora - 12;
+            else if (Ora == 0)
+                return 12;
+            else
+                return Ora;
         }
+
+        public bool IsPM() => (Ora >= 12);
     }
 }

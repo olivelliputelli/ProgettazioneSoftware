@@ -6,10 +6,10 @@ namespace ChatClassLibrary
     {
         private int ora;
 
-        public int Ora
+        public virtual int Ora
         {
-            get { return ora; }
-            set { ora = (value >= 0 && value <= 23) ? value : throw new ArgumentOutOfRangeException("Orario non valido!"); }
+            get => ora;
+            set => ora = (value >= 0 && value <= 23) ? value : throw new ArgumentOutOfRangeException("Orario non valido!");
         }
 
         private int minuti;
